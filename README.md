@@ -1,16 +1,15 @@
-# PluginsForPolytoriaCreator
-Making Polytoria Creator usable by providing support for mods/plugins! This tool utilizes [MelonLoader](https://github.com/LavaGang/MelonLoader/) - a Unity Mono & IL2Cpp mod loader. Since the process of installing it
-with Polytoria requires additional work than the normal installation I have decided to make this tool.
+# SINCAdvancedMods
+SINCAdvancedMods lets you easily install advanced code mods for Software Inc using [MelonLoader](https://github.com/LavaGang/MelonLoader/) - a Unity Mono & IL2Cpp mod loader. It allows for limitless access to the games internals - even with Harmony support thanks to MelonLoader. This tool is meant to streamline the MelonLoader installation and to streamline the process of installing mods.
 
 ### hi guyz how 2 instal mod?
-1. Download and extract PluginsForPolytoriaCreator (from now on "PfPC")
-2. Run PfPC and press the "Install Loader/Sync" button on the top right corner
+1. Download and extract SINCAdvancedMods (from now on "SINCAm")
+2. Run SINCAm and press the "Install Loader/Sync" button on the top right corner, SINCAm will prompt you to select your games installation. You can get that path by clicking on the cogwheel in your steam library and pressing "Open local path".
 3. Once the loader installation is finished (you will see "Synced mods!" at the bottom status bar), you can click "Install from zip file"
-4. In the opened file dialog, select a valid zipped mod (an example, "F2Rename", is provided in the release section)
-5. You are done! Start Polytoria Creator and test if you can rename Instances using F2!
+4. In the opened file dialog, select a valid zipped mod (an example is provided in the release section (not actually, this is wip))
+5. You are done!
 
 ### pls tell how 2 make mod
-1. The general modding process is the usual MelonLoader Modding Process, you can refer to this [documentation](https://melonwiki.xyz/#/modders/quickstart) but I have found it to be relatively outdated as of now, so you will have to adapt a bit.
+1. The general modding process is the usual MelonLoader Modding Process, you can refer to this [documentation](https://melonwiki.xyz/#/modders/quickstart).
 2. Create a new folder and call it "files" - put your mod files in there.
 3. Create a new file NEXT to the "files" folder and call it "meta.json"
 4. Fill it with the appropriate information following the ModMeta schema.
@@ -21,21 +20,20 @@ with Polytoria requires additional work than the normal installation I have deci
 {
     "ModDisplayName": "string",
     "ModFolderName": "string",
-    "MinCreatorVersion": long,
-    "MaxCreatorVersion": long,
     "ModType": "string enum: Mod, UserLib"
 }
 ```
 
-### Creator Versions
-As you have noticed, the creator version contains dots, but I expect you to provide a number? Well, its easy. Replace the dots with '0' and take the number without the dots. Thats your numeric version. I am not sure if this idea has flaws so if it has
-please tell me and I will try to make a better numeric version "calculator"
-
 ## Future Plans
 Future plans are: 
-  - Install from GIT
+  - Install directly from a Git repository
   - Install multiple from single zip, basically multiple plugins/mods/userlibs bundled within one zip file
   - Public mods registry
   - Update mods directly
   - Maybe even provide some basic libraries to make modding easier
-  - Maybe linux support (probably only cli commands though)
+
+# Notes
+
+This is based on one of my previous projects, [Plugins for Polytoria Creator](https://github.com/GoldenretriverYT/PluginsForPolytoriaCreator) which is archived due to an upcoming change in the game engine Polytoria will use.
+
+This repository contains built files from [UnityExplorer](https://github.com/sinai-dev/UnityExplorer) licensed under GPL-3.0; distributed files from UnityExplorer are licensed under GPL-3.0, the rest of the repository is licensed under MIT license.
